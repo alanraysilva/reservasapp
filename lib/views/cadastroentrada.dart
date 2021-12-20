@@ -12,6 +12,7 @@ import 'package:reservas/services/reservasapi.dart';
 import 'package:reservas/utils/ferramentas.dart';
 import 'package:reservas/utils/utils.dart';
 import 'package:reservas/views/home.dart';
+import 'package:reservas/globals.dart' as globals;
 
 import 'entrada.dart';
 
@@ -34,7 +35,9 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
   final TextEditingController _qtdecriancas = TextEditingController();
   final TextEditingController _qtdebebes = TextEditingController();
   final TextEditingController _dtentrada = TextEditingController();
+  final TextEditingController _hrentrada = TextEditingController();
   final TextEditingController _dtsaida = TextEditingController();
+  final TextEditingController _hrsaida = TextEditingController();
   final TextEditingController _valor  = TextEditingController();
   final TextEditingController _pedido = TextEditingController();
 
@@ -50,15 +53,19 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
   bool _valCriancas = false;
   bool _valbebes = false;
   bool _valDtEntrada = false;
+  bool _valhrEntrada = false;
   bool _valDtSaida = false;
+  bool _valhrSaida = false;
   bool _valValor = false;
   String? _msgErro = '';
   bool _isSelected = false;
   bool _isCheckin = false;
   late String codigoReserva;
 
-  var maskFormatterEntrada = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
-  var maskFormatterSaida = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterDtEntrada = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterDtSaida = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterHrEntrada = MaskTextInputFormatter(mask: '##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterHrSaida = MaskTextInputFormatter(mask: '##:##', filter: { "#": RegExp(r'[0-9]') });
 
 
   @override
@@ -328,36 +335,164 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
             ),
           ),
           Divider(color: Colors.transparent),
-          TextFormField(
-            controller: _dtentrada,
-            keyboardType: TextInputType.number,
-            inputFormatters: [maskFormatterEntrada],
-            style: const TextStyle(color: Colors.black),
-            decoration: InputDecoration(
-              enabledBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black)
+          Wrap(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width / 4,
+                child: TextFormField(
+                  controller: _dtentrada,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterDtEntrada],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Data Entrada',
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valDtEntrada? _msgErro:null,
+                  ),
+                ),
               ),
-              labelText: 'Data Entrada' ,
-              hintText: 'digite a entrada',
-              labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
-              errorText: _valDtEntrada? _msgErro:null,
-            ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.calendar_today,
+                    size: 35,
+                  ),
+                  padding: const EdgeInsets.only(top: 10),
+                  onPressed: (){
+                    showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(DateTime.now().year),
+                        lastDate: DateTime(DateTime.now().year + 1)
+                    ).then((date) {
+                      setState(() {
+                        _dtentrada.text = DateFormat('dd/MM/yyyy').format(date!);
+                      });
+                    });
+                  }
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width / 5,
+                child: TextFormField(
+                  controller: _hrentrada,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterHrEntrada],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Horário' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valhrEntrada? _msgErro:null,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.more_time,
+                    size: 40,
+                  ),
+                  padding: const EdgeInsets.only(top: 10, left: 15),
+
+                  onPressed: (){
+                    showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    ).then((time){
+                      setState(() {
+                        _hrentrada.text =  globals.formatTimeOfDay(time!);
+                      });
+                    });
+                  }
+              )
+            ],
           ),
           Divider(color: Colors.transparent),
-          TextFormField(
-            controller: _dtsaida,
-            keyboardType: TextInputType.number,
-            inputFormatters: [maskFormatterSaida],
-            style: const TextStyle(color: Colors.black),
-            decoration: InputDecoration(
-              enabledBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black)
+          Wrap(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width / 4,
+                child: TextFormField(
+                  controller: _dtsaida,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterDtSaida],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Data Saída' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valDtSaida? _msgErro:null,
+                  ),
+                ),
               ),
-              labelText: 'Data Saída',
-              hintText: 'digite a saida',
-              labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
-              errorText: _valDtSaida? _msgErro:null,
-            ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.calendar_today,
+                    size: 35,
+                  ),
+                  padding: const EdgeInsets.only(top: 10),
+                  onPressed: (){
+                    showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(DateTime.now().year),
+                        lastDate: DateTime(DateTime.now().year + 1)
+                    ).then((date) {
+                      setState(() {
+                        if(date != null){
+                          _dtsaida.text = DateFormat('dd/MM/yyyy').format(date);
+                        }
+                      });
+                    });
+                  }
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width / 5,
+                child: TextFormField(
+                  controller: _hrsaida,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterHrEntrada],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Horário' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valhrSaida? _msgErro:null,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.more_time,
+                    size: 40,
+                  ),
+                  padding: const EdgeInsets.only(top: 10, left: 15),
+
+                  onPressed: (){
+                    showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    ).then((time){
+                      setState(() {
+                        if(time != null){
+                          _hrsaida.text =  globals.formatTimeOfDay(time);
+                        }
+                      });
+                    });
+                  }
+              )
+            ],
           ),
           Divider(color: Colors.transparent),
           TextFormField(
@@ -468,9 +603,9 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
             codigoReserva, "Ativo", _cliente.text,
             _telefone.text, int.parse(_qtdeAdultos.text),
             int.parse(_qtdecriancas.text), int.parse(_qtdebebes.text),
-            0, DateFormat('dd/MM/yyyy HH:mm').parse(_dtentrada.text),
-            DateFormat('dd/MM/yyyy HH:mm').parse(_dtsaida.text),
-            DateFormat('dd/MM/yyyy HH:mm').parse(_dtentrada.text),
+            0, globals.juntaDatahora(_dtentrada.text, _hrentrada.text),
+            globals.juntaDatahora(_dtsaida.text, _hrsaida.text),
+            globals.juntaDatahora(_dtentrada.text, _hrentrada.text),
             double.parse(_valor.text), "", _pedido.text,
             DateFormat('dd/MM/yyyy HH:mm').parse('01/01/0001 00:00'),
             apto, garagemMdl, estaVerificado(), '',
@@ -567,6 +702,16 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
       });
     }
 
+    if (_hrentrada.text.isEmpty){
+      setState(() {
+        _valhrEntrada = true;
+      });
+    } else{
+      setState(() {
+        _valhrEntrada = false;
+      });
+    }
+
     if (_dtsaida.text.isEmpty){
       setState(() {
         _valDtSaida = true;
@@ -577,10 +722,21 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
       });
     }
 
+    if (_hrsaida.text.isEmpty){
+      setState(() {
+        _valhrSaida = true;
+      });
+    } else{
+      setState(() {
+        _valhrSaida = false;
+      });
+    }
+
     return _valcliente == false && _valtelefone == false
         && _valAdultos == false && _valCriancas == false
         && _valbebes == false && _valValor == false
         && _valDtEntrada == false && _valDtSaida == false
+        && _hrentrada == false && _valhrSaida == false
         ? true: false;
   }
 

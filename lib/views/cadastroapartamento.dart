@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:reservas/models/apartamentomdl.dart';
 import 'package:reservas/services/apartamentoapi.dart';
 import 'package:reservas/utils/ferramentas.dart';
 import 'package:reservas/utils/utils.dart';
 import 'package:reservas/views/home.dart';
+import 'package:reservas/globals.dart' as globals;
 
 class CadastroApartamento extends StatefulWidget {
   final ApartamentoMdl apartamentoMdl;
@@ -18,11 +21,20 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
   final ApartamentoMdl aptomdl;
   final TextEditingController _numero = TextEditingController();
   final TextEditingController _descricao = TextEditingController();
+  final TextEditingController _hrentrada = TextEditingController();
+  final TextEditingController _hrsaida = TextEditingController();
+
+
+  var maskFormatterEntrada = MaskTextInputFormatter(mask: '##:##', filter: { "#": RegExp(r'[0-9]') });
+  var maskFormatterSaida = MaskTextInputFormatter(mask: '##:##', filter: { "#": RegExp(r'[0-9]') });
+
 
 
   bool _valnumero = false;
   bool _valdescricao = false;
   bool _possuiGaragem = false;
+  bool _valHrEntrada = false;
+  bool _valHrSaida = false;
   String? _msgErro = '';
 
   _CadastroApartamentoState(this.aptomdl);
@@ -35,6 +47,8 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
       if(aptomdl.id > 0){
         _numero.text = aptomdl.numero.toString();
         _descricao.text = aptomdl.descricao.toString();
+        _hrentrada.text = aptomdl.horarioEntrada != null ? aptomdl.horarioEntrada.toString() : '';
+        _hrsaida.text = aptomdl.horarioSaida != null ? aptomdl.horarioSaida.toString() : '';
 
         if(aptomdl.possuiGaragem.toString() == 'S'){
           _possuiGaragem = true;
@@ -88,7 +102,7 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
     return ListView(
       children: <Widget>[
         textoinicial(),
-        SizedBox(height: 50),
+        SizedBox(height: 30),
         criaForm(),
         const Divider(color: Colors.transparent),
         criaBotaoSalvar(),
@@ -128,7 +142,7 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
               errorText: _valnumero? _msgErro:null,
             ),
           ),
-          SizedBox(height: 50),
+          Divider(color: Colors.transparent),
           TextFormField(
             controller: _descricao,
             keyboardType: TextInputType.text,
@@ -142,6 +156,93 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
               labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
               errorText: _valdescricao? _msgErro:null,
             ),
+          ),
+          Divider(color: Colors.transparent),
+          Wrap(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width / 1.5,
+                child: TextFormField(
+                  controller: _hrentrada,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterEntrada],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Horário Entrada' ,
+                    hintText: 'digite a entrada',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valHrEntrada? _msgErro:null,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                child: Icon(
+                  Icons.more_time,
+                  size: 40,
+                ),
+                  padding: const EdgeInsets.only(top: 10, left: 15),
+
+                  onPressed: (){
+                    showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    ).then((time){
+                      setState(() {
+                        if(time != null){
+                          _hrentrada.text =  globals.formatTimeOfDay(time);
+                        }
+                      });
+                    });
+                  }
+              )
+            ],
+          ),
+
+          Divider(color: Colors.transparent),
+          Wrap(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width / 1.5,
+                child: TextFormField(
+                  controller: _hrsaida,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterEntrada],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Horário Saída' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valHrSaida? _msgErro:null,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.more_time,
+                    size: 40,
+                  ),
+                  padding: const EdgeInsets.only(top: 10, left: 15),
+
+                  onPressed: (){
+                    showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    ).then((time){
+                      setState(() {
+                        if(time != null){
+                          _hrsaida.text =  globals.formatTimeOfDay(time);
+                        }
+                      });
+                    });
+                  }
+              )
+            ],
           ),
           Divider(color: Colors.transparent),
           Container(
@@ -191,7 +292,8 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
 
   _gravarApartamento() async {
     if(podeSalvar()){
-      ApartamentoMdl envio = ApartamentoMdl(aptomdl.id, int.parse(_numero.text), _descricao.text, aptomdl.possuiGaragem, 'A');
+      ApartamentoMdl envio = ApartamentoMdl(aptomdl.id, int.parse(_numero.text),
+          _descricao.text, aptomdl.possuiGaragem, 'A', _hrentrada.text, _hrsaida.text);
       String msg;
       if (envio.id > 0){
         msg = await atualizarApartamento(envio,'Atualizando', context );
@@ -243,7 +345,27 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
         _valdescricao = false;
       });
     }
-    return _valnumero == false && _valdescricao == false ? true: false;
+    if (_hrentrada.text.isEmpty){
+      setState(() {
+        _valHrEntrada = true;
+      });
+    } else{
+      setState(() {
+        _valHrEntrada = false;
+      });
+    }
+    if (_hrsaida.text.isEmpty){
+      setState(() {
+        _valHrSaida = true;
+      });
+    } else{
+      setState(() {
+        _valHrSaida = false;
+      });
+    }
+    return _valnumero == false && _valdescricao == false
+        && _valHrEntrada == false && _valHrSaida == false
+        ? true: false;
   }
 
 }

@@ -9,6 +9,7 @@ import 'package:reservas/utils/ferramentas.dart';
 import 'package:reservas/utils/utils.dart';
 import 'package:reservas/views/home.dart';
 import 'package:reservas/views/saida.dart';
+import 'package:reservas/globals.dart' as globals;
 
 class EditarSaida extends StatefulWidget {
   final Airbndmdl airbndmdl;
@@ -23,10 +24,12 @@ class _EditarSaidaState extends State<EditarSaida> {
   late List<FuncionarioMdl> lstFuncionario = [];
 
   final TextEditingController _dtlimpeza = TextEditingController();
+  final TextEditingController _hrlimpeza = TextEditingController();
   final TextEditingController _valor = TextEditingController();
   final TextEditingController _observacao = TextEditingController();
 
   bool _valdtlimpeza = false;
+  bool _valhrlimpeza = false;
   bool _valvalor = false;
 
   String? _msgErro = '';
@@ -62,7 +65,8 @@ class _EditarSaidaState extends State<EditarSaida> {
 
     if(airmdl.dataLimpeza != null){
       DateTime dt = DateTime.parse(airmdl.dataLimpeza.toString());
-      _dtlimpeza.text = DateFormat('dd/MM/yyyy HH:mm').format(dt);
+      _dtlimpeza.text = DateFormat('dd/MM/yyyy').format(dt);
+      _hrlimpeza.text = DateFormat('HH:mm').format(dt);
     }
 
     if(airmdl.valorLimpeza != null){
@@ -87,7 +91,9 @@ class _EditarSaidaState extends State<EditarSaida> {
   }
 
 
-  var maskFormatter = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterDtLimpeza = MaskTextInputFormatter(mask: '##/##/#### ##:##', filter: { "#": RegExp(r'[0-9]') });
+  final maskFormatterHrLimpeza = MaskTextInputFormatter(mask: '##:##', filter: { "#": RegExp(r'[0-9]') });
+
 
   @override
   Widget build(BuildContext context) {
@@ -221,20 +227,86 @@ class _EditarSaidaState extends State<EditarSaida> {
             ),
           ),
           Divider(color: Colors.transparent),
-          TextFormField(
-            controller: _dtlimpeza,
-            keyboardType: TextInputType.number,
-            inputFormatters: [maskFormatter],
-            style: const TextStyle(color: Colors.black),
-            decoration: InputDecoration(
-              enabledBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black)
+          Wrap(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width / 4,
+                child: TextFormField(
+                  controller: _dtlimpeza,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterDtLimpeza],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Data da Limpeza' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valdtlimpeza? _msgErro:null,
+                  ),
+                ),
               ),
-              labelText: 'Data da Limpeza ( Dt. Saída: ' + DateFormat('dd/MM/yyyy HH:mm').format(airmdl.saida) + ')',
-              hintText: 'digite a saida',
-              labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
-              errorText: _valdtlimpeza? _msgErro:null,
-            ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.calendar_today,
+                    size: 35,
+                  ),
+                  padding: const EdgeInsets.only(top: 10),
+                  onPressed: (){
+                    showDatePicker(
+                        context: context,
+                        initialDate: airmdl.dataLimpeza != null ? airmdl.dataLimpeza!: DateTime.now(),
+                        firstDate: DateTime(DateTime.now().year),
+                        lastDate: DateTime(DateTime.now().year + 1)
+                    ).then((date) {
+                      setState(() {
+                        if(date != null){
+                          _dtlimpeza.text = DateFormat('dd/MM/yyyy').format(date);
+                        }
+                      });
+                    });
+                  }
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width / 5,
+                child: TextFormField(
+                  controller: _hrlimpeza,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [maskFormatterHrLimpeza],
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
+                    labelText: 'Horário' ,
+                    hintText: 'digite a saida',
+                    labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                    errorText: _valhrlimpeza? _msgErro:null,
+                  ),
+                ),
+              ),
+              MaterialButton(
+                  child: Icon(
+                    Icons.more_time,
+                    size: 40,
+                  ),
+                  padding: const EdgeInsets.only(top: 10, left: 15),
+
+                  onPressed: (){
+                    showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.fromDateTime(airmdl.dataLimpeza!) != null ? TimeOfDay.fromDateTime(airmdl.dataLimpeza!): TimeOfDay.now(),
+                    ).then((time){
+                      setState(() {
+                        if(time != null){
+                          _hrlimpeza.text =  globals.formatTimeOfDay(time);
+                        }
+                      });
+                    });
+                  }
+              )
+            ],
           ),
           Divider(color: Colors.transparent),
           TextFormField(
@@ -297,7 +369,7 @@ class _EditarSaidaState extends State<EditarSaida> {
                   if(_isCheckout){
                     airmdl.situacao = 'I';
                   } else {
-                    airmdl.situacao = 'A';
+                    airmdl.situacao = 'O';
                   }
                 });
               },
@@ -359,7 +431,7 @@ class _EditarSaidaState extends State<EditarSaida> {
             airmdl.ganhos, airmdl.descricao, airmdl.pedido, airmdl.proximaEntrada,
             airmdl.objApartamento, airmdl.objGaragem,
             airmdl.verificadoEntrada, airmdl.verificadoSaida,
-            DateFormat('dd/MM/yyyy HH:mm').parse(_dtlimpeza.text),
+            globals.juntaDatahora(_dtlimpeza.text, _hrlimpeza.text),
             double.parse(_valor.text), _observacao.text, func, airmdl.situacao);
 
 
@@ -406,6 +478,17 @@ class _EditarSaidaState extends State<EditarSaida> {
         _valdtlimpeza = false;
       });
     }
+
+    if(_hrlimpeza.text.isEmpty){
+      setState(() {
+        _valhrlimpeza = true;
+      });
+    } else{
+      setState(() {
+        _valhrlimpeza = false;
+      });
+    }
+
     if (_valor.text.isEmpty){
       setState(() {
         _valvalor = true;
@@ -416,7 +499,8 @@ class _EditarSaidaState extends State<EditarSaida> {
       });
     }
 
-    return _valdtlimpeza == false && _valvalor == false ? true: false;
+    return _valdtlimpeza == false && _valvalor == false
+        && _valhrlimpeza == false ? true: false;
   }
 
   String verificaNumeroApartamento() {

@@ -13,7 +13,7 @@ class ConsultaApartamento extends StatefulWidget {
 }
 
 class _ConsultaApartamentoState extends State<ConsultaApartamento> {
-  ApartamentoMdl novo = ApartamentoMdl(0, 1, '', '', 'A');
+  ApartamentoMdl novo = ApartamentoMdl(0, 1, '', '', 'A','','');
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

@@ -355,12 +355,17 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
               cellAlignment: pw.Alignment.topLeft,
               cellStyle: pw.TextStyle(fontSize: 12),
               data: <List<String>>[
-                <String>['Pessoa','Data/Hora','Ap','Valor'],
+                //<String>['Pessoa','Data/Hora','Ap','Valor'],
+                <String>['Data/Hora','Ap','Valor','Pessoa'],
                 for (int i = 0; i < mdl.length; i++)
-                  <String>['${mdl[i].objFuncionario!.nome.toString()}',
+                  /*<String>['${mdl[i].objFuncionario!.nome.toString()}',
                     '${DataUtil.formataDataComDiaExtenso(mdl[i].dataLimpeza)}',
                     '${mdl[i].objApartamento.numero.toString()}',
-                    '${globals.formataMoeda(mdl[i].valorLimpeza, false)}'],
+                    '${globals.formataMoeda(mdl[i].valorLimpeza, false)}'],*/
+                  <String>['${DataUtil.formataDataComDiaExtenso(mdl[i].dataLimpeza)}',
+                    '${mdl[i].objApartamento.numero.toString()}',
+                    '${globals.formataMoeda(mdl[i].valorLimpeza, false)}',
+                    '${mdl[i].objFuncionario!.nome.toString()}'],
               ]),
           pw.Padding(padding: const pw.EdgeInsets.all(10)),
         ]));

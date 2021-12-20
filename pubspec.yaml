@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   font_awesome_flutter: ^8.4.0
   line_icons: ^2.0.1
   sn_progress_dialog: ^1.0.3
@@ -44,6 +46,7 @@ dependencies:
   flutter_pdfview: ^1.0.4
   advance_pdf_viewer: ^2.0.0
   url_launcher: ^6.0.17
+  #localization: ^1.1.1
 
 
 

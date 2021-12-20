@@ -6,7 +6,8 @@ import 'package:intl/intl.dart';
 
 //String baseUrlTeste = 'https://10.0.2.2:5001';
 //String baseUrlTeste = 'https://101.102.100.78:5001';
-String baseUrlTeste = 'http://reservawebapi.eba-aiejpyfm.us-east-1.elasticbeanstalk.com';
+//String baseUrlTeste = 'http://reservawebapi.eba-aiejpyfm.us-east-1.elasticbeanstalk.com';
+String baseUrlTeste = 'http://reservasapi-env.eba-ps27spem.us-east-2.elasticbeanstalk.com';
 String BasicAutenticate = 'Basic cmVzZXJ2YTpTVzRANHYjbw==';
 
 TextStyle fomataTituloCampos(){
@@ -47,6 +48,18 @@ TextStyle fomataTituloMenu(){
       fontSize: 18
   );
 }
+
+String formatTimeOfDay(TimeOfDay tod) {
+  final now = new DateTime.now();
+  final dt = DateTime(now.year, now.month, now.day, tod.hour, tod.minute);
+  return DateFormat('HH:mm').format(dt);
+}
+
+DateTime juntaDatahora(String dt, String hr){
+  DateTime dh = DateFormat('dd/MM/yyyy HH:mm').parse(dt + ' ' +  hr);
+  return dh;
+}
+
 
 String formataMoeda(double? valor, bool usarmascara){
   String res = '';
