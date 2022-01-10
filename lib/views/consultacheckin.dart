@@ -221,7 +221,7 @@ class _ConsultaCheckinState extends State<ConsultaCheckin> {
         margin: pw.EdgeInsets.all(4),
         pageFormat: PdfPageFormat.a4,
         build: (pw.Context context) => <pw.Widget>[
-          pw.Paragraph(text: "OS INQUILINOS SÃO PROIBIDOS RECEBER VISITAS, SALVO SE AUTORIZADOS POR NÓS."),
+          pw.Paragraph(text: "OS INQUILINOS SÃO PROIBIDOS RECEBEREM VISITAS, SALVO SE AUTORIZADOS POR NÓS."),
           pw.Paragraph(text: " "),
           pw.Table.fromTextArray(
               context: context,
@@ -238,7 +238,7 @@ class _ConsultaCheckinState extends State<ConsultaCheckin> {
                     '${mdl[i].hospede}', verificaGaragem(mdl[i].objGaragem)],
               ]),
           pw.Paragraph(text: " "),
-          pw.Paragraph(text: "OS INQUILINOS SÃO PROIBIDOS RECEBER VISITAS, SALVO SE AUTORIZADOS POR NÓS."),
+          pw.Paragraph(text: "OS INQUILINOS SÃO PROIBIDOS RECEBEREM VISITAS, SALVO SE AUTORIZADOS POR NÓS."),
           pw.Paragraph(text: "Dúvidas, estamos a diposição."),
           pw.Paragraph(text: "Ennio (19) 99958.3622"),
           pw.Paragraph(text: "Sônia (35) 9744.4272"),

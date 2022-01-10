@@ -459,7 +459,7 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
                 child: TextFormField(
                   controller: _hrsaida,
                   keyboardType: TextInputType.number,
-                  inputFormatters: [maskFormatterHrEntrada],
+                  inputFormatters: [maskFormatterHrSaida],
                   style: const TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     enabledBorder: const UnderlineInputBorder(
@@ -736,7 +736,7 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
         && _valAdultos == false && _valCriancas == false
         && _valbebes == false && _valValor == false
         && _valDtEntrada == false && _valDtSaida == false
-        && _hrentrada == false && _valhrSaida == false
+        && _valhrEntrada == false && _valhrSaida == false
         ? true: false;
   }
 
