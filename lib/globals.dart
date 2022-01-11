@@ -62,12 +62,17 @@ DateTime juntaDatahora(String dt, String hr){
 
 
 String formataMoeda(double? valor, bool usarmascara){
-  String res = '';
-  String vl = NumberFormat.currency(locale: 'BR', decimalDigits: 2, symbol: '').format(valor);
-  if (usarmascara == true){
-    res = 'R\$';
+  if(valor != null){
+    String res = '';
+    String vl = NumberFormat.currency(locale: 'BR', decimalDigits: 2, symbol: '').format(valor);
+    if (usarmascara == true){
+      res = 'R\$';
+    }
+    return res + vl;
+  }else {
+    return 'R\$0,00';
   }
-  return res + vl;
+
 }
 
 Widget loadingDados(){

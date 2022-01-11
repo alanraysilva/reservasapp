@@ -343,9 +343,10 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
   }
 
   _criaPdf(BuildContext context, List<Airbndmdl> mdl) async {
+    List<Airbndmdl> lst = mdl;
     final pw.Document pdf = pw.Document(deflate: zlib.encode);
     pdf.addPage(pw.MultiPage(
-        margin: pw.EdgeInsets.all(4),
+        margin: const pw.EdgeInsets.all(4),
         pageFormat: PdfPageFormat.a4,
         build: (pw.Context context) => <pw.Widget>[
           pw.Table.fromTextArray(
@@ -357,15 +358,12 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
               data: <List<String>>[
                 //<String>['Pessoa','Data/Hora','Ap','Valor'],
                 <String>['Data/Hora','Ap','Valor','Pessoa'],
-                for (int i = 0; i < mdl.length; i++)
-                  /*<String>['${mdl[i].objFuncionario!.nome.toString()}',
-                    '${DataUtil.formataDataComDiaExtenso(mdl[i].dataLimpeza)}',
-                    '${mdl[i].objApartamento.numero.toString()}',
-                    '${globals.formataMoeda(mdl[i].valorLimpeza, false)}'],*/
-                  <String>['${DataUtil.formataDataComDiaExtenso(mdl[i].dataLimpeza)}',
-                    '${mdl[i].objApartamento.numero.toString()}',
-                    '${globals.formataMoeda(mdl[i].valorLimpeza, false)}',
-                    '${mdl[i].objFuncionario!.nome.toString()}'],
+
+                for (int i = 0; i < lst.length; i++)
+                  <String>['${DataUtil.formataDataComDiaExtenso(lst[i].dataLimpeza)}',
+                    '${lst[i].objApartamento.numero.toString()}',
+                    '${globals.formataMoeda(lst[i].valorLimpeza, false)}',
+                    '${verificaObjFuncionario(lst[i].objFuncionario)}'],
               ]),
           pw.Padding(padding: const pw.EdgeInsets.all(10)),
         ]));
@@ -384,6 +382,14 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
 
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => ViewPdf("${diretorio}/" + arquivo)));
+  }
+
+  String verificaObjFuncionario(FuncionarioMdl? objFuncionario) {
+    if (objFuncionario != null){
+      return objFuncionario.nome.toString();
+    } else {
+      return 'Sem informação.';
+    }
   }
 
 }
