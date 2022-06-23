@@ -41,6 +41,7 @@ Airbndmdl _$AirbndmdlFromJson(Map<String, dynamic> json) => Airbndmdl(
           : FuncionarioMdl.fromJson(
               json['objFuncionario'] as Map<String, dynamic>),
       json['situacao'] as String?,
+      json['conflitoGaragem'] as String?,
     );
 
 Map<String, dynamic> _$AirbndmdlToJson(Airbndmdl instance) => <String, dynamic>{
@@ -69,4 +70,5 @@ Map<String, dynamic> _$AirbndmdlToJson(Airbndmdl instance) => <String, dynamic>{
       'observacaoLimpeza': instance.observacaoLimpeza,
       'objFuncionario': instance.objFuncionario,
       'situacao': instance.situacao,
+      'conflitoGaragem': instance.conflitoGaragem,
     };

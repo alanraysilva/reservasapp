@@ -105,7 +105,7 @@ class _EditarSaidaState extends State<EditarSaida> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),
@@ -432,7 +432,7 @@ class _EditarSaidaState extends State<EditarSaida> {
             airmdl.objApartamento, airmdl.objGaragem,
             airmdl.verificadoEntrada, airmdl.verificadoSaida,
             globals.juntaDatahora(_dtlimpeza.text, _hrlimpeza.text),
-            double.parse(_valor.text), _observacao.text, func, airmdl.situacao);
+            double.parse(_valor.text), _observacao.text, func, airmdl.situacao, airmdl.conflitoGaragem);
 
 
 

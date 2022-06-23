@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 
 //String baseUrlTeste = 'https://10.0.2.2:5001';
 //String baseUrlTeste = 'https://101.102.100.78:5001';
-//String baseUrlTeste = 'http://reservawebapi.eba-aiejpyfm.us-east-1.elasticbeanstalk.com';
 String baseUrlTeste = 'http://reservasapi-env.eba-ps27spem.us-east-2.elasticbeanstalk.com';
 String BasicAutenticate = 'Basic cmVzZXJ2YTpTVzRANHYjbw==';
 

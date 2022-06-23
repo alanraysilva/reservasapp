@@ -32,6 +32,7 @@ class Airbndmdl {
   String? observacaoLimpeza;
   FuncionarioMdl? objFuncionario;
   String? situacao;
+  String? conflitoGaragem;
 
 
   Airbndmdl(this.id, this.codigo, this.status, this.hospede, this.telefone,
@@ -40,7 +41,7 @@ class Airbndmdl {
       this.pedido, this.proximaEntrada, this.objApartamento,
       this.objGaragem, this.verificadoEntrada, this.verificadoSaida,
       this.dataLimpeza, this.valorLimpeza, this.observacaoLimpeza,
-      this.objFuncionario, this.situacao);
+      this.objFuncionario, this.situacao, this.conflitoGaragem);
 
   factory Airbndmdl.fromJson(Map<String, dynamic> json) => _$AirbndmdlFromJson(json);
   Map<String, dynamic> toJson() => _$AirbndmdlToJson(this);

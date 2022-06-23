@@ -97,6 +97,7 @@ flutter:
     - assets/dialogo/login.png
     - assets/dialogo/quantidade.png
     - assets/dialogo/atencao.png
+    - assets/dialogo/carro.png
     - assets/app/icon.png
 
   #   - images/a_dot_ham.jpeg

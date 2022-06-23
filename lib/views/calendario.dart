@@ -21,7 +21,7 @@ class _CalendarioState extends State<Calendario> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),
@@ -58,6 +58,8 @@ class _CalendarioState extends State<Calendario> {
         criaBotaoCheckin(),
         SizedBox(height: 50),
         criaBotaoCheckout(),
+        SizedBox(height: 50),
+        criaBotaoReservasAntigas(),
       ],
     );
   }
@@ -109,6 +111,30 @@ class _CalendarioState extends State<Calendario> {
           ),
         ),
         color: Colors.redAccent,
+        elevation: 0,
+        minWidth: 350,
+        height: 60,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50)
+        ),
+        onPressed: () => Navigator.push(context, MaterialPageRoute(
+            builder: (context) => Saida())),
+      ),
+    );
+  }
+
+  criaBotaoReservasAntigas() {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: MaterialButton(
+        child: const Text('Reservas Antigas',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white
+          ),
+        ),
+        color: Colors.white12,
         elevation: 0,
         minWidth: 350,
         height: 60,

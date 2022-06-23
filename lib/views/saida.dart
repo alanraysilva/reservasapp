@@ -26,7 +26,7 @@ class _SaidaState extends State<Saida> {
         body: SingleChildScrollView(
           child: Stack(
             children: <Widget>[
-              criabordalateral(),
+              //criabordalateral(),
               textoinicial(),
               consultaReservas()
             ],

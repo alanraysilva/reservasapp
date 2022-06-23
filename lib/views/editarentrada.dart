@@ -124,7 +124,7 @@ class _EditarEntradaState extends State<EditarEntrada> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),
@@ -326,6 +326,7 @@ class _EditarEntradaState extends State<EditarEntrada> {
                 )
             ),
           ),
+          VerificaConflitoGaragem(context),
           Divider(color: Colors.transparent),
           Wrap(
             children: <Widget>[
@@ -530,6 +531,14 @@ class _EditarEntradaState extends State<EditarEntrada> {
     );
   }
 
+   VerificaConflitoGaragem(BuildContext context) {
+    if(airmdl.conflitoGaragem != 'N')
+    {
+      return criabotaoVerificarConflito(context);
+    } else{
+      return Divider(color: Colors.transparent);
+    }
+  }
 
   List<DropdownMenuItem<String>> getDropDownMenuItems() {
     List<DropdownMenuItem<String>> items = [];
@@ -569,7 +578,7 @@ class _EditarEntradaState extends State<EditarEntrada> {
           airmdl.objApartamento, airmdl.objGaragem,
           airmdl.verificadoEntrada, airmdl.verificadoSaida,
           DateFormat('dd/MM/yyyy HH:mm').parse('01/01/0001 00:00'),
-          null, null, null, 'O');
+          null, null, null, 'O','');
           //null, null, null, airmdl.situacao);
 
       String msg;
@@ -686,6 +695,49 @@ class _EditarEntradaState extends State<EditarEntrada> {
         && _valDtSaida == false && _valhrEntrada == false
         && _valhrSaida == false ? true: false;
   }
+
+  Widget criabotaoVerificarConflito(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: MaterialButton(
+        child: const Text('Conflitos',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white
+          ),
+        ),
+        color: Colors.redAccent,
+        elevation: 0,
+        minWidth: 150,
+        height: 40,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50)
+        ),
+        onPressed: () => mostraconflitos(context),
+      ));
+  }
+
+  mostraconflitos(BuildContext context) {
+    String msg = "";
+    var conf = airmdl.conflitoGaragem?.split(';');
+    List<String> n = [];
+    if(conf != null)
+    {
+      n.addAll(conf);
+      n.forEach((i) {
+        if(i != ''){
+           msg = msg + "Ap.: "+ i.toString() + "\n";
+        }
+      });
+      if(msg != null){
+        mostraMensage(context, "Conflitos", msg,1);
+      }
+    }
+
+
+  }
 }
+
 
 

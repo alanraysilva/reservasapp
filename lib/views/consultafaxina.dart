@@ -69,7 +69,7 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

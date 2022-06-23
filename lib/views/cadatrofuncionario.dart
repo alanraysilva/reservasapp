@@ -48,7 +48,7 @@ class _CadastroFuncionarioState extends State<CadastroFuncionario> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

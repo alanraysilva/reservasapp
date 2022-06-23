@@ -21,7 +21,7 @@ class _CadastroState extends State<Cadastro> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

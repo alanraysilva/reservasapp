@@ -48,7 +48,7 @@ class _CadastroGaragemState extends State<CadastroGaragem> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

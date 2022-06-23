@@ -34,7 +34,7 @@ class _EntradaState extends State<Entrada> {
             child: const Padding(
               padding: EdgeInsets.all(16.0),
               child: Icon(Icons.add,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           )
@@ -44,7 +44,7 @@ class _EntradaState extends State<Entrada> {
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
-            criabordalateral(),
+            //criabordalateral(),
             textoinicial(),
             consultaReservas()
           ],
@@ -228,7 +228,8 @@ class _EntradaState extends State<Entrada> {
               ),
             ),
           ),
-          verificaPendencia(mdl)
+          verificaPendencia(mdl),
+          verificaConflitoGaragem(mdl)
         ],
       ),
     );
@@ -237,13 +238,29 @@ class _EntradaState extends State<Entrada> {
   verificaPendencia(Airbndmdl mdl) {
     if(mdl.verificadoEntrada != 'S'){
       return Positioned(
-        top: 15.0,
+        top: 12.0,
         right: 20.0,
         child: Image(
           image: AssetImage('assets/dialogo/atencao.png'),
           height: 30,
           width: 30,
         )
+      );
+    } else {
+      return Text('');
+    }
+  }
+
+  verificaConflitoGaragem(Airbndmdl mdl) {
+    if(mdl.conflitoGaragem != 'N'){
+      return Positioned(
+          top: 12.0,
+          right: 60.0,
+          child: Image(
+            image: AssetImage('assets/dialogo/carro.png'),
+            height: 30,
+            width: 30,
+          )
       );
     } else {
       return Text('');

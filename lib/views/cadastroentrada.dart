@@ -109,7 +109,7 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),
@@ -610,7 +610,7 @@ class _CadastroEntradaState extends State<CadastroEntrada> {
             DateFormat('dd/MM/yyyy HH:mm').parse('01/01/0001 00:00'),
             apto, garagemMdl, estaVerificado(), '',
             DateFormat('dd/MM/yyyy HH:mm').parse('01/01/0001 00:00'),
-            null, null, null, 'O');
+            null, null, null, 'O','');
             //null, null, null, feitoCheckin());
 
         String msg;

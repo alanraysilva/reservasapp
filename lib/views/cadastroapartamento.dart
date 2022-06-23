@@ -69,7 +69,7 @@ class _CadastroApartamentoState extends State<CadastroApartamento> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

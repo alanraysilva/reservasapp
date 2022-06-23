@@ -43,7 +43,7 @@ class _ConsultaCheckinState extends State<ConsultaCheckin> {
       ),
       body: Stack(
         children: <Widget>[
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

@@ -28,7 +28,7 @@ class _ConsultaGaragemState extends State<ConsultaGaragem> {
             child: const Padding(
               padding: EdgeInsets.all(16.0),
               child: Icon(Icons.add,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           )
@@ -37,7 +37,7 @@ class _ConsultaGaragemState extends State<ConsultaGaragem> {
       body: Stack(
         children: <Widget>[
           Container(height: MediaQuery.of(context).size.height),
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),

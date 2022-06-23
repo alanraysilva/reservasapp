@@ -30,7 +30,7 @@ class _ImportarState extends State<Importar> {
       body: Stack(
         children: <Widget>[
           Container(height: MediaQuery.of(context).size.height),
-          criabordalateral(),
+          //criabordalateral(),
           criaItens(),
         ],
       ),
