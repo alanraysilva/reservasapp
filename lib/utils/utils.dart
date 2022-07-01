@@ -102,6 +102,16 @@ class Texts {
     ),
   );
 
+  static const ReservasAntigasText = Text(
+    'Reservas Antigas',
+    style: TextStyle(
+      fontFamily: Fonts.primaryFont,
+      fontSize: 28.0,
+      color: AppColors.primaryBlue,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+
   static const RelatorioEntradaText = Text(
     'Relatório Entrada',
     style: TextStyle(

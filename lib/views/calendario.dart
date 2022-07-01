@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reservas/utils/utils.dart';
 import 'package:reservas/views/entrada.dart';
+import 'package:reservas/views/reservas_antigas.dart';
 import 'package:reservas/views/saida.dart';
 
 class Calendario extends StatefulWidget {
@@ -54,12 +55,12 @@ class _CalendarioState extends State<Calendario> {
     return ListView(
       children: <Widget>[
         textoinicial(),
-        SizedBox(height: 50),
+        SizedBox(height: 20),
         criaBotaoCheckin(),
-        SizedBox(height: 50),
+        SizedBox(height: 20),
         criaBotaoCheckout(),
-        SizedBox(height: 50),
-        criaBotaoReservasAntigas(),
+        SizedBox(height: 20),
+        criaBotaoAntigas(),
       ],
     );
   }
@@ -123,7 +124,7 @@ class _CalendarioState extends State<Calendario> {
     );
   }
 
-  criaBotaoReservasAntigas() {
+  criaBotaoAntigas() {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: MaterialButton(
@@ -134,7 +135,7 @@ class _CalendarioState extends State<Calendario> {
               color: Colors.white
           ),
         ),
-        color: Colors.white12,
+        color: Colors.black45,
         elevation: 0,
         minWidth: 350,
         height: 60,
@@ -142,9 +143,10 @@ class _CalendarioState extends State<Calendario> {
             borderRadius: BorderRadius.circular(50)
         ),
         onPressed: () => Navigator.push(context, MaterialPageRoute(
-            builder: (context) => Saida())),
+            builder: (context) => ReservasAntigas())),
       ),
     );
   }
+
 
 }

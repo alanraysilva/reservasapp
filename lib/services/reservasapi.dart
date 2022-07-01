@@ -43,6 +43,42 @@ Future<List<Airbndmdl>>getReservas(BuildContext context,int tipo) async{
   }
 }
 
+Future<List<Airbndmdl>>getReservasAntigas(BuildContext context,int tipo) async{
+  try{
+    final Dio dio = Dio();
+    (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
+        (HttpClient client) {
+      client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+      return client;
+    };
+    String apiUrl =  globals.baseUrlTeste + '/api/Reservas/GetReservasAntigas/';
+    Response response = await dio.get(apiUrl,
+      options: Options(headers: {
+        HttpHeaders.authorizationHeader:globals.BasicAutenticate,
+      }),
+    );
+    var getAirbndData = response.data as List;
+    var listAirbnd = getAirbndData.map((i) => Airbndmdl.fromJson(i)).toList();
+    return listAirbnd;
+
+  }on DioError catch (e){
+    if (e.response?.statusCode == HttpStatus.unauthorized){
+      mostraMensage(context, "Erro", e.response!.data.toString(),1);
+      throw("");
+    }else if (e.response?.statusCode == HttpStatus.internalServerError){
+      mostraMensage(context, "Erro", e.response!.data.toString(),1);
+      throw("");
+    }else if (e.response?.statusCode == HttpStatus.notFound){
+      mostraMensage(context, "Erro", e.response!.data.toString(),1);
+      throw("");
+    }else{
+      mostraMensage(context, "Erro", e.response!.data.toString(),1);
+      throw("");
+    }
+  }
+}
+
+
 Future<List<Airbndmdl>>getConsultaReservas(BuildContext context, String dtini, String dtfim) async{
   try{
     final Dio dio = Dio();
