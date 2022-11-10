@@ -1,0 +1,282 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+MERGED from [:flutter_pdfview] C:\FlutterProj\reservasapp\build\flutter_pdfview\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-19:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\FlutterProj\reservasapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] C:\FlutterProj\reservasapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] C:\FlutterProj\reservasapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:advance_pdf_viewer] C:\FlutterProj\reservasapp\build\advance_pdf_viewer\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\49ee56b0281d56630769e0edb4a3310a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [com.github.barteksc:android-pdf-viewer:3.2.0-beta.1] C:\Users\alanr\.gradle\caches\transforms-3\b366ea94d542a300f4a60ba6f44ec501\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\alanr\.gradle\caches\transforms-3\b5c5922722fade96c8be58d3a5a0993c\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\487844c153812fb399f049caa8acc4e0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\58a5583ca853e0e198c67abb9785ce48\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6a06fceeb8ac2d04acca7b618a7fe51f\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\985306e5663e3c4bf4e1b7d51f5fa230\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5bec7cdb9c0d3b3191b0e244db0b351b\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\06d3e1cdad8e271d7f393ecfb0996ad1\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\ad4a717024ad35d289d10da47ec75681\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6e224d6542df735765ab08fb37f3e2dc\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\e7c80cd814a3058b959d79d09b6d4644\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\235cda20632c62804b53fa1ccef2cac9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5b4eb247519946647c4478176d00e299\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\04003f9618954f8f8c4e5f98b9789517\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\80262799bcfe28aa51855108d108b7f8\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5525c8672eb67d808f41f2627f493d2f\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\alanr\.gradle\caches\transforms-3\5a2e8c121a4f305bdff73c402713443c\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\10e04298686e4a3f2145cfbbb94c33c0\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\20b1410a56a3ab6d3a43e5cd538c02f4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\05be0e421f67fa703694e0d1a47f3616\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\1e94c2198322536c44eb10c38f5b68b2\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\fba859ed96dc399f3dc6a45913435d4a\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\0d3abb1f797d2ce4fd84f8f7e7dfe2ce\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\7b7215c233f5a4a37b3cf1f23d483316\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\52532bdeb5be72909b2cea70493768d1\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alanr\.gradle\caches\transforms-3\0b257271d9bc08846682c40328826de3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\alanr\.gradle\caches\transforms-3\dc141547d00e68556a3f486d4e432298\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\a4036807b9a1b81d5431412544880c80\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\85eaba68dfbe1e470c080661845c0356\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\9f7d7450fd390e22cbfdd1eaad86beb4\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+	package
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:2:5-39
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:3:5-80
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:3:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:4:5-79
+MERGED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-80
+MERGED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:4:22-77
+uses-permission#android.permission.INTERNET
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:7:22-76
+application
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:8:4-38:19
+MERGED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-14:19
+MERGED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-16:19
+MERGED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-16:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alanr\.gradle\caches\transforms-3\0b257271d9bc08846682c40328826de3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alanr\.gradle\caches\transforms-3\0b257271d9bc08846682c40328826de3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:requestLegacyExternalStorage
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:10:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:9:9-33
+	android:icon
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:11:9-43
+activity#br.com.reservas.reservas.MainActivity
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:12:9-32:20
+	android:screenOrientation
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:18:13-49
+	android:launchMode
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:14:13-43
+	android:hardwareAccelerated
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:17:13-47
+	android:windowSoftInputMode
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:19:13-55
+	android:configChanges
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:16:13-163
+	android:theme
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:15:13-47
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:13:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:24:13-27:17
+	android:resource
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:26:15-52
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:25:15-70
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:28:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:29:17-68
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:30:17-76
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:30:27-74
+meta-data#flutterEmbedding
+ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:35:9-37:33
+	android:value
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:37:13-30
+	android:name
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml:36:13-44
+uses-sdk
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+MERGED from [:flutter_pdfview] C:\FlutterProj\reservasapp\build\flutter_pdfview\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] C:\FlutterProj\reservasapp\build\flutter_pdfview\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\FlutterProj\reservasapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\FlutterProj\reservasapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\FlutterProj\reservasapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\FlutterProj\reservasapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\FlutterProj\reservasapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\FlutterProj\reservasapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:advance_pdf_viewer] C:\FlutterProj\reservasapp\build\advance_pdf_viewer\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:advance_pdf_viewer] C:\FlutterProj\reservasapp\build\advance_pdf_viewer\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\49ee56b0281d56630769e0edb4a3310a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\49ee56b0281d56630769e0edb4a3310a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.2.0-beta.1] C:\Users\alanr\.gradle\caches\transforms-3\b366ea94d542a300f4a60ba6f44ec501\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.2.0-beta.1] C:\Users\alanr\.gradle\caches\transforms-3\b366ea94d542a300f4a60ba6f44ec501\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\alanr\.gradle\caches\transforms-3\b5c5922722fade96c8be58d3a5a0993c\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\alanr\.gradle\caches\transforms-3\b5c5922722fade96c8be58d3a5a0993c\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\487844c153812fb399f049caa8acc4e0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\487844c153812fb399f049caa8acc4e0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\58a5583ca853e0e198c67abb9785ce48\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\58a5583ca853e0e198c67abb9785ce48\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6a06fceeb8ac2d04acca7b618a7fe51f\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6a06fceeb8ac2d04acca7b618a7fe51f\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\985306e5663e3c4bf4e1b7d51f5fa230\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\985306e5663e3c4bf4e1b7d51f5fa230\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5bec7cdb9c0d3b3191b0e244db0b351b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5bec7cdb9c0d3b3191b0e244db0b351b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\06d3e1cdad8e271d7f393ecfb0996ad1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\06d3e1cdad8e271d7f393ecfb0996ad1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\ad4a717024ad35d289d10da47ec75681\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\ad4a717024ad35d289d10da47ec75681\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6e224d6542df735765ab08fb37f3e2dc\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\6e224d6542df735765ab08fb37f3e2dc\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\e7c80cd814a3058b959d79d09b6d4644\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\e7c80cd814a3058b959d79d09b6d4644\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\235cda20632c62804b53fa1ccef2cac9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\235cda20632c62804b53fa1ccef2cac9\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5b4eb247519946647c4478176d00e299\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5b4eb247519946647c4478176d00e299\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\04003f9618954f8f8c4e5f98b9789517\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\04003f9618954f8f8c4e5f98b9789517\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\80262799bcfe28aa51855108d108b7f8\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\80262799bcfe28aa51855108d108b7f8\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5525c8672eb67d808f41f2627f493d2f\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\5525c8672eb67d808f41f2627f493d2f\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\alanr\.gradle\caches\transforms-3\2db35f2f5f4bd78b5405dcb1f7494a55\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\alanr\.gradle\caches\transforms-3\5a2e8c121a4f305bdff73c402713443c\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\alanr\.gradle\caches\transforms-3\5a2e8c121a4f305bdff73c402713443c\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\10e04298686e4a3f2145cfbbb94c33c0\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\10e04298686e4a3f2145cfbbb94c33c0\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\20b1410a56a3ab6d3a43e5cd538c02f4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\20b1410a56a3ab6d3a43e5cd538c02f4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\05be0e421f67fa703694e0d1a47f3616\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\05be0e421f67fa703694e0d1a47f3616\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\1e94c2198322536c44eb10c38f5b68b2\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\1e94c2198322536c44eb10c38f5b68b2\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\fba859ed96dc399f3dc6a45913435d4a\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\fba859ed96dc399f3dc6a45913435d4a\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\0d3abb1f797d2ce4fd84f8f7e7dfe2ce\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\0d3abb1f797d2ce4fd84f8f7e7dfe2ce\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\7b7215c233f5a4a37b3cf1f23d483316\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\7b7215c233f5a4a37b3cf1f23d483316\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\52532bdeb5be72909b2cea70493768d1\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\alanr\.gradle\caches\transforms-3\52532bdeb5be72909b2cea70493768d1\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alanr\.gradle\caches\transforms-3\0b257271d9bc08846682c40328826de3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alanr\.gradle\caches\transforms-3\0b257271d9bc08846682c40328826de3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\alanr\.gradle\caches\transforms-3\dc141547d00e68556a3f486d4e432298\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\alanr\.gradle\caches\transforms-3\dc141547d00e68556a3f486d4e432298\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\a4036807b9a1b81d5431412544880c80\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\a4036807b9a1b81d5431412544880c80\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\85eaba68dfbe1e470c080661845c0356\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alanr\.gradle\caches\transforms-3\85eaba68dfbe1e470c080661845c0356\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\9f7d7450fd390e22cbfdd1eaad86beb4\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alanr\.gradle\caches\transforms-3\9f7d7450fd390e22cbfdd1eaad86beb4\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\FlutterProj\reservasapp\android\app\src\main\AndroidManifest.xml
+queries
+ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-17:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-16:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-72
+	android:name
+		ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:13:21-69
+data
+ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-44
+	android:mimeType
+		ADDED from [:file_picker] C:\FlutterProj\reservasapp\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:15:19-41
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] C:\FlutterProj\reservasapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-74
+provider#com.zt.shareextend.ShareExtendProvider
+ADDED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-15:20
+	android:grantUriPermissions
+		ADDED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-76
+	android:exported
+		ADDED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:share_extend] C:\FlutterProj\reservasapp\build\share_extend\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-66
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\alanr\.gradle\caches\transforms-3\d7809b45f3ab2cf40e75b4b80bdd075d\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
