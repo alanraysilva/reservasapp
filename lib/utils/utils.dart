@@ -62,6 +62,28 @@ class Texts {
     ),
   );
 
+  static const RelatorioGaragemText = Text(
+    'Relatório Garagem',
+    style: TextStyle(
+      fontFamily: Fonts.primaryFont,
+      fontSize: 28.0,
+      color: AppColors.primaryBlue,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+
+  static const RelatoriosText = Text(
+    'Relatórios',
+    style: TextStyle(
+      fontFamily: Fonts.primaryFont,
+      fontSize: 28.0,
+      color: AppColors.primaryBlue,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+
+
+
   static const CalendarioText = Text(
     'Calendário',
     style: TextStyle(

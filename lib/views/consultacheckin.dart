@@ -247,7 +247,7 @@ class _ConsultaCheckinState extends State<ConsultaCheckin> {
 
     final String dir = (await getTemporaryDirectory()).path;
 
-    final String arquivo = 'pdf_'+ DateFormat('dd_MM_yyyy').format(DateTime.now()) +'.pdf';
+    final String arquivo = 'CheckIn_'+ DateFormat('dd_MM_yyyy').format(DateTime.now()) +'.pdf';
     final String diretorio = '$dir';
     final file = File("${diretorio}/" + arquivo);
 

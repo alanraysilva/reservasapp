@@ -38,13 +38,13 @@ dependencies:
   intl: ^0.17.0
   json_annotation: ^4.1.0
   path: ^1.8.0
-  path_provider: ^2.0.7
+  path_provider: ^2.0.11
   file_picker: ^4.2.3
   mask_text_input_formatter: ^2.0.0
   pdf: ^3.6.4
   share_extend: ^2.0.0
   flutter_pdfview: ^1.0.4
-  advance_pdf_viewer: ^2.0.0
+  advance_pdf_viewer: ^2.0.1
   url_launcher: ^6.0.17
   #localization: ^1.1.1
 

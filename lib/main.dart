@@ -8,6 +8,7 @@ import 'package:reservas/views/consultagaragem.dart';
 import 'package:reservas/views/home.dart';
 import 'package:reservas/views/importar.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:reservas/views/relatorios.dart';
 
 
 void main() {
@@ -19,11 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate
       ],
-      supportedLocales: [const Locale('pt', 'BR')],
+      supportedLocales: const [Locale('pt', 'BR')],
       debugShowCheckedModeBanner: false,
       title: 'Reservas',
       theme: ThemeData(
@@ -39,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/consultacheckin':(context) => const ConsultaCheckin(),
         '/consultafaxina':(context) => const ConsultaFaxina(),
         '/cadastro':(context) => const Cadastro(),
+        '/relatorios':(context) => const Relatorios(),
       },
     );
   }

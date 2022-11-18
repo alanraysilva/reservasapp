@@ -43,9 +43,9 @@ class _HomeState extends State<Home> {
     },*/
     {
       'id':'5',
-      'title':'Relatório Entrada',
+      'title':'Relatórios',
       'img':'assets/images/rptentrada.png',
-      'rota':'/consultacheckin'
+      'rota':'/relatorios'
     },
     {
       'id':'6',
