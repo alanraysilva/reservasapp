@@ -246,7 +246,7 @@ class _RelatorioGaragemState extends State<RelatorioGaragem> {
 
     final String dir = (await getTemporaryDirectory()).path;
 
-    final String arquivo = 'Garagem_'+ DateFormat('dd_MM_yyyy').format(DateTime.now()) +'.pdf';
+    final String arquivo = 'Garagem_'+ DateFormat('dd_MM_yyyy_hh_mm_ss').format(DateTime.now()) +'.pdf';
     final String diretorio = '$dir';
     final file = File("${diretorio}/" + arquivo);
 
