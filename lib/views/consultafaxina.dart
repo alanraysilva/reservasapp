@@ -371,7 +371,7 @@ class _ConsultaFaxinaState extends State<ConsultaFaxina> {
 
     final String dir = (await getTemporaryDirectory()).path;
 
-    final String arquivo = 'Limpeza_'+ DateFormat('dd_MM_yyyy_hh_mm_ss').format(DateTime.now()) +'.pdf';
+    final String arquivo = 'Limpeza_'+ DateFormat('dd_MM_yyyy_HH_mm_ss').format(DateTime.now()) +'.pdf';
     final String diretorio = '$dir';
     final file = File("${diretorio}/" + arquivo);
 
